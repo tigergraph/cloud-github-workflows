@@ -19,4 +19,5 @@ jobs:
         with:
           # soft_fail_commenter - set to true to to comment silently without breaking the build
           # tfsec_args: --custom-check-dir ${{ inputs.path }}
+          tfsec_args: --force-all-dirs
           github_token: ${{ github.token }}
