@@ -2,10 +2,10 @@ name: tfsec-pr-commentor
 on:
   pull_request:
   workflow_call:
-    inputs:
-      path:
-        required: true
-        type: string
+    # inputs:
+    #   path:
+    #     required: true
+    #     type: string
 jobs:
   tfsec:
     name: tfsec PR commenter
@@ -18,5 +18,5 @@ jobs:
         uses: aquasecurity/tfsec-pr-commenter-action@v1.2.0
         with:
           # soft_fail_commenter - set to true to to comment silently without breaking the build
-          tfsec_args: --custom-check-dir ${{ inputs.path }}
+          # tfsec_args: --custom-check-dir ${{ inputs.path }}
           github_token: ${{ github.token }}
