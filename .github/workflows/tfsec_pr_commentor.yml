@@ -15,7 +15,7 @@ jobs:
       - name: Clone repo
         uses: actions/checkout@master
       - name: tfsec
-        uses: aquasecurity/tfsec-pr-commenter-action@v1.2.0
+        uses: aquasecurity/tfsec-pr-commenter-action@main
         with:
           # soft_fail_commenter - set to true to to comment silently without breaking the build
           tfsec_args: --custom-check-dir ${{ inputs.path }}
