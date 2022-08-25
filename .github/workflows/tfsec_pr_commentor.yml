@@ -2,10 +2,10 @@ name: tfsec-pr-commentor
 on:
   pull_request:
   workflow_call:
-    inputs:
-      path:
-        required: true
-        type: string
+    # inputs:
+    #   path:
+    #     required: true
+    #     type: string
 jobs:
   tfsec:
     name: runner / tfsec
